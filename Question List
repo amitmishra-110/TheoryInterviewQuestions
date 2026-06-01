@@ -1,0 +1,645 @@
+Java 8 Features
+Message Architecture
+Circuit Breaker
+about Previous project
+occurrences of characters in a string
+employee class - sort by name followed by dept
+Comparator 
+----------------
+1) About past project,
+2) Project architecture then some questions about that,
+3) supplier, comsumer,predicate, implement, use lambda funtion
+4) stream question - List<String> strs= Arrays.asList("sumiut","amit","santosh"); extract data starts with s letter
+5) if change x->startsWith to Collectors.groupingBy(x->x.substring(0,1) then what code changes need to done
+-------------------------
+1)//table employee empid,empname,managerid,department
+//op--> empname,managername
+
+2)There is a tray (shared resource) that can hold 10 coffee mugs.
+Producer → restaurant staff who puts coffee mugs on the tray.
+Consumer → user/customer who takes coffee mugs from the tray.
+If tray is FULL → producer must WAIT (cannot add more coffee).
+If tray is EMPTY → consumer must WAIT (no coffee available).
+
+3)Student student1=new Student(1,"rohit");
+Student student2=new Student(2,"rahul");
+Student student3=new Student(3,"prabhash");
+Student student4=new Student(4,"rohit");
+what will be hashset size if remove hashcode and equals method and add equals on id or name
+
+4)in How many way we can process file and when to use which 
+5)code on ExecutorService write sample code and return something and ExecutorService  advantage
+6)multithreading question how to achieve
+7) diff http status code
+8)If your system allows only 10 requests per minute, but the client sends 15 requests what will be status code
+9) if want to load during startup of ur application how can you do
+10) 70% question related to thread only
+ 
+volitile
+postConstruct
+-------------------
+Suchit shah
+L2 Part 1: 
+Given a list of strings representing colour names, create a map (or dictionary) where: The key is the first character of each colour name. The value is a list of all colour names that start with that character. Group all colours that begin with the same character under the same key.
+What collection would you consider when storing country names?
+Difference between Hashset and Treeset. 
+Internally working of Hashset? How is different in internal working of HashMap and HashSet?
+What challenges you faced when converting sync services to async services? 
+What is DispatcherServlet in Spring MVC? 
+What is ViewResolver? 
+Describe entire flow of fetch data in Spring MVC. 
+What are disadvantages of immutability in String?
+What's the solution of passwords stored in String getting leaked via String Constant Pool?
+How to write a custom Exception? 
+How does JVM knows where to throw the checked exception? What's the internal working for it?
+Scenario based: Suppose there's a delay in sending response to UI, but there's no delay in fetching response from DB. What's could be wrong with your project?
+What could be the issue if there's a delay in response from DB? How to optimize database performance? 
+What features of AWS have you used? 
+Scenario based: Suppose you want to process 20 files and the process is taking time. How can I optimise it?
+Scenario based: If i am using multiple threads to write the file data in the DB, how to ensure thread safety?
+
+L2 Part 2: 
+Tell me about yourself and your project
+What was throughput of your system? 
+Draw a High Level Design of Billing Transaction at Shopping Mall? Use OOPs. 
+What's output when we use "private static void main(String[] args)" twice in a program? Follow-up questions: What if I change the access modifier from public to private? And use use "String...args" instead of String[]? What will happen internally?
+Have you used AI in your project? 
+------------------------
+Java / Performance
+Which is faster — for loop vs Stream API?
+If only performance matters, which one will you choose?
+🌐 Networking / Microservices
+What kind of network traffic/protocol did you use?
+How did your system handle high traffic volume?
+What happens if a microservice goes down?
+What will API1 do if API4 is down?
+How do you decide when to retry calling failed service?
+How does circuit breaker recover automatically?
+What is rate limiter and its benefits?
+⚙️ System Design / Real-time Systems
+How systems like Google Sheets track active users?
+🧠 Memory / Performance Issues
+Have you faced OutOfMemoryError?
+How do you analyze and fix memory issues?
+📄 File Processing
+Which library do you use to read Excel?
+How to handle large files in Apache POI?
+🧵 Multithreading / Concurrency
+How do threads communicate with each other?
+How does one thread wait for another?
+What is join()?
+Do you use ExecutorService or manual threads?
+How do threads communicate in ExecutorService?
+Which thread pool type to choose and when?
+What is the parent interface (Executor)?
+What is Callable?
+🌱 Spring Boot
+Difference between Spring Boot 2 vs Spring Boot 3
+How do you define a REST controller?
+What is the problem with exposing entity directly in controller?
+🗄️ JPA / Hibernate
+How to handle same entity ID with multiple objects without affecting original?
+Concept of persistence context / first-level cache
+🧪 Testing
+How to mock static methods (Mockito)?
+How to mock property values from application.properties?
+🗄️ Database / SQL
+Why databases are fast in fetching data?
+What are different types of indexes?
+SQL: Get customers who have at least one order
+What is this query called? (Semi Join)
+🧩 Coding / String Problem
+Custom string transformation problem
+(letters + digits + special chars manipulation)
+🔥 Overall Pattern (Important Insight):
+Interview heavily focused on:
+Real-world microservices resilience
+Concurrency
+Performance optimization
+Spring Boot fundamentals
+ 
+
+HLD -> EV Charging application Design the architecture of this app
+Scalability, availability
+Booking slot Dashboard , type of vehicles
+So they are not asking traditional questions.. they are looking whether candidate know upstream, downstream application how they will communicate. 
+
+Will have to ask our candidate to prepare from the prospective of complete application, DB designing , framework , design patterns .
+ 
+ 
+Helen selvi
+-----------------
+ 
+1. Inside application how will you identify User / who called this method 
+2. how to communicate one service to another microservice 
+and I want to send same message to all service. How it is possible? 
+3. Three washshoorm --> One washroom for women, second washroom--> men,  third washroom for common (men and women)
+Totally 20 person, at the time only one person able to use the washroom. three washroom should not be empty (Semaphore - allowing the limitations=3)
+4. Spring boot - Thread concept
+5. Generic comparator method - How will you write
+6. Java 21 concepts - Virtual thread why its required? what is the difference between old thread model & Virtual, var empList = new ArrayList<Employee>(); - why var is introduced? 
+7. Transaction types
+ 
+------------------------------------------------------------------------------------------
+ 
+ 
+Tell me About your current Project and your role in Project?
+ 
+Which methodology you follow in your current Project?
+ 
+Have you developed any React Project from scratch ?
+ 
+Have you create any specific custom hook in your current project ?
+ 
+Do you know about JSX in React and its advantage in React
+ 
+Controlled Component vs Uncontrolled Component
+ 
+Do have any experience in Redux and Context API
+ 
+When we use Redux and when we use Context API
+ 
+What is Prop Drilling in React and what is Potential issue in Prop Drilling
+ 
+what is Object Prototype
+ 
+Have you worked on Typescript?
+ 
+React
+ 
+React component life cycle
+ 
+life cycle methods name
+ 
+Do you know about Hooks
+ 
+Have you created hooks
+ 
+Useefect hooks
+ 
+Reducer hook how to use advantage Usestate hook  
+ 
+benefit of usereducer
+ 
+have you created custom hooks
+
+Version java, spring bootl
+ 
+Java 8 features
+ 
+functional interface can we have other concreate functional
+ 
+Comparator reverse order -> sorting and find program
+ 
+failsafe and failfast difference
+ 
+are we using linklist also in java 8 for hashmap-
+ 
+how to delete an array
+ 
+spring boot latency how to reduce how to improve API response faster -indexing , cashing, load balancer, cookies header.
+ 
+what all annotations used in spring boot application and brief explanation.
+ 
+static polymorphism , dynamic polymorphism
+ 
+spring boot bean life cycle
+
+----------------------------------------------------------------------------------------------------------------------------------
+ 
+1. Difference between Abstraction and encapsulation
+2. Internal behavior of HashMap
+3. tricky qtns on Employee class and using Employee as a key in Hashmap
+4. How to restric key modification of hashmap-> by making Employee class immutable
+5. How to make Employee class immutable
+6. Override equals and hashcode method and few tricky qtns of problem solving with code snippet
+7. CompletableFuture
+8. How Spring Security works
+9. JWT
+10. Conditional beans qtn with code snippet -> where I had to identify that conditional bean shoud be used
+10. @Transactional annotation
+11. If I have 2 entities Employee and Address, how to make sure that while saving new Employee in database, if there is exception during saving address then also Employee should be saved with null address
+12. My role in previous project
+13. SQL queries with group by and having
+ 
+-------------------------------------------------------------------------------------------------------
+ 
+MVC architectire 
+entity framework
+OOPs concept
+where to use Interface and abstration
+SQL DML operations
+CICD pipeline github docker imaging , kubernatives
+CLI commands windows
+entity framework approach 
+data first approach core first approach
+Jenkins
+Unit testing
+repository pattern
+design pattern
+how to create containers and docker images
+how you will deploy  project
+sonarquobe for codereview
+Unittesting
+
+----------------------
+Sending same message to all microservices
+Fanout exchange
+-------------------------------------------------
+Version java, spring bootl
+Java 8 features
+functional interface can we have other concreate functional
+Comparator reverseorder -> sorting and find program
+failsafe and failfast difference
+are we using linklist also in java 8 for hashmap-
+how to delete an array
+spring boot latency how to reduce how to improve API response faster -indexing , cashing, load balancer, cookies header.
+what all annotations used in spring boot application and breif explanation.
+static polymorphism , dynamic polymorphism
+spring boot bean life cycle
+ 
+EXCEPTION CHECKED unchecked
+JAVA 8 map feature-  EXVEPTION why we using
+default static method functional interface
+core java
+try with resources
+MICROSERVICES 
+if u have old legacy application , without any xml to json
+ 
+3 washroom and 20 persons. -> Synchronously type .. 
+Manually Generic comparator - Array's 
+Account object - has id, name, account no -> sort the object
+streams 
+Spring framework how to handle thread concept
+Java spring boot microservices react
+Monisha Rao -> Shailesh pande as hiring manager
+HLD EVCharging application
+microservices REST API 
+xcalidrop, - dropping 
+req
+Database -> MongoDB if nonrelational db
+Scalability availability
+Booking chart- > Booking ID , slot id
+---
+ 
+-----
+Java micro services
+solace message broker listening
+ 
+akash padhiyar
+1. Difference between Abstraction and encapsulation
+2. Internal behavior of HashMap
+3. tricky qtns on Employee class and using Employee as a key in Hashmap
+4. How to restric key modification of hashmap-> by making Employee class immutable
+5. How to make Employee class immutable
+6. Override equals and hashcode method and few tricky qtns of problem solving with code snippet
+7. CompletableFuture
+8. How Spring Security works
+9. JWT
+10. Conditional beans qtn with code snippet -> where I had to identify that conditional bean shoud be used
+10. @Transactional annotation
+11. If I have 2 entities Employee and Address, how to make sure that while saving new Employee in database, if there is exception during saving address then also Employee should be saved with null address
+12. My role in previous project
+13. SQL queries with group by and having
+ 
+Round 2
+1. Previous clients and my role in projects
+2. Implement binary search tree
+3. Riddle -> in a blank room 2 ropes are there, each takes 1 hour to burn, calculate exactly 45 mins
+4. My views on Ai
+5. Few managerial qtns
+ 
+---------------------------
+They are using IntelliJ -> Their own Cloud environment available, 
+They are using Github copilot trained for their organization
+ 
+--------------------------------------------------------
+MVC architectire 
+entity framework
+OOPs concept
+where to use Interface and abstration
+SQL DML operations
+CICD pipeline github docker imaging , kubernatives
+CLI commands windows
+entity framework approach 
+data first approach core first approach
+Jenkins
+Unit testing
+repository pattern
+design pattern
+how to create containers and docker images
+how you will deploy  project
+sonarquobe for codereview
+Unittesting
+ 
+----------------------
+Sending same message to all microservices
+Fanout exchange
+---------------------------------------------------
+Shailesh pande
+Version java, spring boot
+Java 8 features
+functional interface can we have other concreate functional
+Comparator reverseorder -> sorting and find program
+failsafe and failfast difference
+are we using linklist also in java 8 for hashmap-
+how to delete an array
+spring boot latency how to reduce how to improve API response faster -indexing , cashing, load balancer, cookies header.
+what all annotations used in spring boot application and breif explanation.
+static polymorphism , dynamic polymorphism
+spring boot bean life cycle
+ 
+
+
+================     L2 F2F    =======================================
+
+L2 Part 1: 
+1.	Given a list of strings representing colour names, create a map (or dictionary) where: The 	. The value is a list of all colour names that start with that character. Group all colours that begin with the same character under the same key.
+2.	What collection would you consider when storing country names?
+3.	Difference between Hashset and Treeset. 
+4.	Difference between string ,string builder and string buffer
+5.	Internally working of Hashset? How is different in internal working of HashMap and HashSet?
+6.	What challenges you faced when converting sync services to async services? 
+7.	What is DispatcherServlet in Spring MVC? 
+8.	What is ViewResolver? 
+9.	Describe entire flow of fetch data in Spring MVC. 
+10.	What are disadvantages of immutability in String?
+11.	What's the solution of passwords stored in String getting leaked via String Constant Pool?
+12.	What is the value of a transient variable which does not get serialised to a file
+13.	How to write a custom Exception? 
+14.	How does JVM knows where to throw the checked exception? What's the internal working for it?
+15.	Scenario based: Suppose there's a delay in sending response to UI, but there's no delay in fetching response from DB. What's could be wrong with your project?
+16.	What could be the issue if there's a delay in response from DB? How to optimize database performance? 
+17.	What features of AWS have you used? 
+18.	Scenario based: Suppose you want to process 20 files and the process is taking time. How can I optimise it?
+19.	Scenario based: If i am using multiple threads to write the file data in the DB, how to ensure thread safety?
+ 
+L2 Part 2: 
+1.	Tell me about yourself and your project
+2.	What was throughput of your system? 
+3.	Draw a High Level Design of Billing Transaction at Shopping Mall? Use OOPs. 
+4.	What's output when we use "private static void main(String[] args)" twice in a program? Follow-up questions: What if I change the access modifier from public to private? And use use "String...args" instead of String[]? What will happen internally?
+5.	Have you used AI in your project? 
+ 
+1.	Tell me about yourself.
+2.	What challenges you faced when migrating  a monolithic architecture to microservices?
+3.	What were disadvantages of microservices over monolithic?
+4.	ACID properties
+5.	Given an integer array where numbers are stored in random order and in that one number is missing. Write a program to identity the missing number.
+6.	Employee class -> Id, Name, Salary & Gender. Give the count of male and female employees.
+7.	Difference between Hashset and Treeset. 
+8.	Internal working of data structure in Treeset.
+9.	What is the use of optional if we already have an if condition and we can check the nulls?
+10.	If you create two entities - teacher and student and their mapping is many to many. In that case, how many tables are going to be created in database?
+11.	If I give ask you to write a code, then what will you prefer - JPA or JDBC template?
+12.	Suppose there is one service that is taking too much time to respond, then how do you prevent it or how do you identify the cause?
+13.	Do you know procedures and triggers? 
+14.	Docker file and Docker Compose
+15.	Propagation in @Transactional
+16.	Migrating from monolithic to Micorservices architecture challenges
+17.	Retention Policy Kafka
+18.	Where to configure all the configuration of various microservicies in single file
+19.	CQRS
+20.	What is Garbage collection and type of its algorithm
+21.	Memory area in Java
+22.	What is class loader
+23.	Explain existing project how Arid Remidiation I did , why did we use webflux and how Event Handlers  were used
+
+24.	Connection with S3  With java 
+25.	Second level cache implementation
+26.	Out of memory why it comes 
+27.	Jconsole how to check with which class resulted into Issue
+28.	Design Pattern singleton and prototype
+
+
+
+
+Nomura Round 2 questions	 	 	 	 	 	 	 	 	 	 
+ 	 	 	 	 	 	 	 	 	 	 
+1. Tell about your recent  project	 	 	 	 	 	 	 	 	 	 
+2. How you will contribute in nomura	 	 	 	 	 	 	 	 	 	 
+3. Find employee with max salary without using order by and limit	 	 	 	 	 	 	 	 	 	 
+4. Binary search tree algorithm and implementation	 	 	 	 	 	 	 	 	 	 
+5. Puzzle - 1 box with apple box 2 with orange and box 3 having both apple and oranges all box are wrongly labelled.	 	 	 	 	 	 	 	 	 	 
+6. Puzzle - two stick take 2 hours to burn each. How you will get out of dark room in 30 mins and in 45 mins.										
+
+
+
+
+Round 2	 	 	 	 	 	 	 	 	 	 
+1. Previous clients and my role in projects	 	 	 	 	 	 	 	 	 	 
+2. Implement binary search tree	 	 	 	 	 	 	 	 	 	 
+3. Riddle -> in a blank room 2 ropes are there, each takes 1 hour to burn, calculate exactly 45 mins	 	 	 	 	 	 	 	 	 	 
+4. My views on Ai	 	 	 	 	 	 	 	 	 	 
+5. Few managerial qtns	 	 	 	 	 	 	 	 	 	 
+ 	 	 	 	 	 	 	 	 	 	 
+---------------------------	 	 	 	 	 	 	 	 	 	 
+										
+They are using IntelliJ -> Their own Cloud environment available,	 	 	 	 	 	 	 	 	 	 
+They are using Github copilot trained for their organization	 	 	 	 	 	 	 	 	 	 
+ 	 	 	 	 	 	 	 	 	 	 
+--------------------------------------------------------	 	 	 	 	 	 	 	 	 	 
+MVC architectire	 	 	 	 	 	 	 	 	 	 
+entity framework	 	 	 	 	 	 	 	 	 	 
+OOPs concept	 	 	 	 	 	 	 	 	 	 
+where to use Interface and abstration	 	 	 	 	 	 	 	 	 	 
+SQL DML operations	 	 	 	 	 	 	 	 	 	 
+CICD pipeline github docker imaging , kubernatives	 	 	 	 	 	 	 	 	 	 
+CLI commands windows	 	 	 	 	 	 	 	 	 	 
+entity framework approach	 	 	 	 	 	 	 	 	 	 
+data first approach core first approach	 	 	 	 	 	 	 	 	 	 
+Jenkins	 	 	 	 	 	 	 	 	 	 
+Unit testin0067	 	 	 	 	 	 	 	 	 	 
+repository pattern	 	 	 	 	 	 	 	 	 	 
+design pattern	 	 	 	 	 	 	 	 	 	 
+how to create containers and docker images	 	 	 	 	 	 	 	 	 	 
+how you will deploy  project	 	 	 	 	 	 	 	 	 	 
+sonarquobe for codereview	 	 	 	 	 	 	 	 	 	 
+Unittesting	 	 	 	 	 	 	 	 	 	 
+ 	 	 	 	 	 	 	 	 	 	 
+----------------------	 	 	 	 	 	 	 	 	 	 
+Sending same message to all microservices	 	 	 	 	 	 	 	 	 	 
+Fanout exchange	 	 	 	 	 	 	 	 	 	 
+---------------------------------------------------	 	 	 	 	 	 	 	 	 	 
+Shailesh pande	 	 	 	 	 	 	 	 	 	 
+Version java, spring boot	 	 	 	 	 	 	 	 	 	 
+Java 8 features	 	 	 	 	 	 	 	 	 	 
+functional interface can we have other concreate functional	 	 	 	 	 	 	 	 	 	 
+Comparator reverseorder -> sorting and find program	 	 	 	 	 	 	 	 	 	 
+failsafe and failfast difference	 	 	 	 	 	 	 	 	 	 
+are we using linklist also in java 8 for hashmap-	 	 	 	 	 	 	 	 	 	 
+how to delete an array	 	 	 	 	 	 	 	 	 	 
+spring boot latency how to reduce how to improve API response faster -indexing , cashing, load balancer, cookies header.	 	 	 	 	 	 	 	 	 	 
+what all annotations used in spring boot application and breif explanation.	 	 	 	 	 	 	 	 	 	 
+static polymorphism , dynamic polymorphism	 	 	 	 	 	 	 	 	 	 
+spring boot bean life cycle	 	 	 	 	 	 	 	 	 	 
+
+
+Nomura Round 2 questions	 	 	 	 	 	 	 	 	 	 
+ 	 	 	 	 	 	 	 	 	 	 
+1. Tell about your recent  project	 	 	 	 	 	 	 	 	 	 
+2. How you will contribute in nomura	 	 	 	 	 	 	 	 	 	 
+3. Find employee with max salary without using order by and limit	 	 	 	 	 	 	 	 	 	 
+4. Binary search tree algorithm and implementation	 	 	 	 	 	 	 	 	 	 
+5. Puzzle - 1 box with apple box 2 with orange and box 3 having both apple and oranges all box are wrongly labelled.	 	 	 	 	 	 	 	 	 	 
+6.	Puzzle - two stick take 2 hours to burn each. How you will get out of dark room in 30 mins and in 45 mins.
+
+
+7.	String s1= new String ("Amit");
+String s2 = new String ("Sumit");
+
+how do i make s1==s2 ?
+
+“ String s1 = new String("Amit").intern();
+String s2 = new String("Amit").intern();
+System.out.println(s1 == s2);  // ✅ true “
+
+
+Show more lines
+👉 What happens:
+•	JVM checks: 
+Is "Amit" present in String Pool?
+👉 So it returns:
+Reference of pooled "Amit"
+
+✅ Final Memory Picture
+String Pool:
+     "Amit"  ← s1, s2 (both point here ✅)
+
+Heap:
+     "Amit" (unused temporary object)
+     "Amit" (another temporary object)
+
+
+
+8.	How Hashset works and identifies unique ? based on internally hashmap which uses set values as key and value as dummy and then create hascode and if new check the equals methods
+9.	What is concept of LRU 
+
+10.	   Method Hiding  , static methods are not overriden
+
+class A {
+    static void test() {
+        System.out.println("Class A test");
+    }
+}
+
+class B extends A {
+    static void test() {
+        System.out.println("Class B test");
+    }
+}
+
+
+CALL :
+
+A.test();   // Class A test
+B.test();   // Class B test
+``
+✅ Output:
+Class A test
+Class B test
+
+Using Reference Variable
+
+A obj = new B();
+obj.test();
+``
+
+Output:
+Class A test ✅
+
+✅ ✅ Why?
+👉 Because:
+Static methods are resolved at COMPILE TIME ✅
+
+
+Reference type (A) ✅
+👉 NOT based on:
+Object type (B) ❌
+
+11.	Union and unionall
+12.	 Clustering in databases
+13.	Middleware  - kakfa cosumer to transform
+14.	CQRS Implementation
+15.	What is OWASP
+16.	What is generics
+17.	Csfr
+18.	Concurrent Hasmap working and code 
+19.	WHAT IS MODCOUNT IS FAILFAST AND FAILSAFE
+20.	WHAT IS HASHMAP DEFAILT BUCKET SIZE
+21.	WHAT IS ONE METHOD IS MARKED AS @Transactional and other is not 
+22.	Concurrent hashmap working
+23.	Kubernetes working learn
+
+
+________________________________________
+🔥 What does this mean?
+If current == oldValue → update
+Else → retry
+It just means:
+👉 “Update only if no one else changed the value in between”
+________________________________________
+✅ Think like this (Real-life example)
+Imagine a shared variable:
+value = 0
+________________________________________
+✅ Step-by-step with TWO threads
+🔹 Thread A wants to update:
+oldValue = 0
+newValue = 1
+🔹 Thread B also wants to update:
+oldValue = 0
+newValue = 1
+________________________________________
+❌ Problem (Without CAS)
+Thread A reads 0
+Thread B reads 0
+
+Thread A writes 1
+Thread B writes 1  ❌ (overwrites A)
+👉 Final value = 1 (wrong)
+👉 One update lost ❌
+________________________________________
+✅ Now with CAS
+Step 1:
+Thread A:
+oldValue = 0
+Thread B:
+oldValue = 0
+________________________________________
+Step 2 (Thread A updates):
+CAS checks:
+Is current value still 0? ✅ YES
+👉 Update to 1 ✔
+Now:
+value = 1
+________________________________________
+Step 3 (Thread B tries):
+CAS checks:
+Is current value still 0? ❌ NO (it's now 1)
+👉 So:
+DO NOT update
+RETRY
+________________________________________
+Step 4 (Retry)
+Thread B now reads again:
+oldValue = 1
+newValue = 2
+CAS:
+Is current == 1? ✅ YES
+👉 Update to 2 ✔
+________________________________________
+✅ Final Result
+value = 2 ✅ correct
+
+
+
+
+
+
+										
+
+
+
+
+ 
