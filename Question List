@@ -633,11 +633,183 @@ ________________________________________
 value = 2 ✅ correct
 
 
+#############################################
+Junit & Mockito  Learning
+
+Type 1 : 
+
+@WebMvcTest(EmployeeController.class)
+public class EmployeeControllerTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @MockBean
+    private EmployeeService employeeService;
+
+
+    @BeforeEach
+    void setUp() {
+        emp1 = new Employee( "Amit", "IT", "Mumbai", 50000);
+        emp2 = new Employee( "Rahul", "HR", "Delhi", 60000);
+    }
+
+ @Test
+    void testSaveEmployeeDetails_success() throws Exception {
+        List<Employee> list = List.of(emp1, emp2);
+
+        mockMvc.perform(post("/Employee/save/employeeList/2")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(list)))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Successfully saved 2 employees"));
+
+        Mockito.verify(employeeService, Mockito.times(1)).save(anyList());
+    }
+
+
+Type 2 : 
+@ExtendWith(MockitoExtension.class)
+class EmployeeServiceTest {
+
+
+    @InjectMocks   // Injects instance (no real dependencies here)
+    private EmployeeService employeeService;
+
+
+    private Employee emp1;
+    private Employee emp2;
+    private Employee emp3;
+
+@BeforeEach
+    void setUp() {
+        emp1 = new Employee("Amit", "IT", "Mumbai", 50000);
+        emp2 = new Employee("Rahul", "HR", "Delhi", 60000);
+        emp3 = new Employee("Neha", "IT", "Mumbai", 70000);
+    }
+
+ @Test
+    void testSaveAndGetAll() {
+        employeeService.save(List.of(emp1, emp2, emp3));
+
+        List<Employee> result = employeeService.getAll();
+
+        assertEquals(3, result.size());
+    }
 
 
 
+Explaination of aboveo code
 
-										
+
+🔹 Type 1: @WebMvcTest (Controller Test)
+👉 What it does:
+You are testing only the API layer (Controller)
+You are NOT testing business logic or database
+👉 In simple words:
+
+“I only want to test if my API endpoint works correctly — not the backend logic.”
+
+
+✅ What happens internally:
+
+Spring loads a small web environment
+Only Controller-related things are loaded
+Service is mocked (fake) using @MockBean
+
+
+✅ Your example:
+
+Java@WebMvcTest(EmployeeController.class)Show more lines
+
+
+✅ Meaning:
+
+Load only EmployeeController
+Do NOT load full application
+
+
+✅ Why @MockBean is used?
+
+Java@MockBean
+private EmployeeService employeeService;
+
+👉 Because:
+
+Controller depends on Service
+But we don’t want real service logic
+So we give a fake service
+
+
+✅ What are you testing?
+
+JavamockMvc.perform(post(...))
+
+You are checking:
+
+API is reachable ✅
+Request is correct ✅
+Response is correct ✅
+Service method was called ✅
+
+
+✅ Real-life analogy:
+
+You’re checking:
+“Did the waiter take my order correctly and respond properly?”
+👉 You don’t care how food is cooked.
+
+
+🔹 Type 2: @ExtendWith(MockitoExtension.class) (Service Test)
+👉 What it does:
+You test only business logic (Service class)
+
+👉 In simple words:
+
+“I want to test the logic inside my code, without Spring Boot.”
+
+
+✅ What happens internally:
+
+No Spring Boot starts ❌
+Only plain Java + Mockito ✅
+Fast and lightweight ✅
+
+
+✅ Your example:
+
+Java@ExtendWith(MockitoExtension.class)Show more lines
+
+✅ Meaning:
+
+Enable Mockito (for mocking)
+No Spring context
+
+
+✅ @InjectMocks
+
+Java
+
+@InjectMocks 
+private EmployeeService employeeService;
+
+
+👉 Creates real instance of service
+👉 Injects mocked dependencies if any
+
+✅ What are you testing?
+
+JavaemployeeService.save(...)employeeService.getAll()
+
+✔ Business logic
+✔ Data handling
+✔ Method correctness
+
+✅ Real-life analogy:
+
+You’re checking:
+“Is the chef cooking food correctly?”
+👉 You don’t care how waiter behaves.
 
 
 
