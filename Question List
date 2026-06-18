@@ -813,5 +813,19 @@ You’re checking:
 
 
 
+If you have a DAO/Repository layer and to mock the dependency of it in service layer do this 
+   @Mock
 
- 
+
+
+@ExtendWith(MockitoExtension.class)
+class EmployeeServiceTest {
+
+    @Mock
+    private EmployeeRepository repository;  // Fake dependency
+
+    @InjectMocks
+    private EmployeeService service; // Real object
+
+}
+
